@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Act1_HelloJava {
+    public static void main (String[] args) {
+    Scanner activity = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = activity.nextLine();
+
+        System.out.println("Enter your favorite quote: ");
+        String quote = activity.nextLine();
+
+        System.out.println("My name is " + name  + ".");
+        System.out.println("My favorite quote is " + quote + ".");
+        activity.close();
+        
+    }
+
+}
