@@ -1,19 +1,32 @@
-class BankAccount:
-    def __init__(self):
-        self.__balance = 0  
+class BankAccount {
+    private double balance;
 
-    def deposit(self, amount):
-        if amount > 0:
-            self.__balance += amount
+    public BankAccount() {
+        this.balance = 0;
+    }
 
-    def withdraw(self, amount):
-        if 0 < amount <= self.__balance:
-            self.__balance -= amount
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
 
-    def get_balance(self):
-        return self.__balance
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+        }
+    }
 
-account = BankAccount()
-account.deposit(1000)
-account.withdraw(200)
-print("Current balance:", account.get_balance())
+    public double getBalance() {
+        return balance;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount();
+        account.deposit(1000);
+        account.withdraw(200);
+        System.out.println("Current balance: " + account.getBalance());
+    }
+}
